@@ -1,20 +1,37 @@
 import { MdSchool } from "react-icons/md";
-import { FaSearch } from "react-icons/fa";
+import { FaCalendarAlt, FaSearch } from "react-icons/fa";
 import { PiGridNineFill } from "react-icons/pi";
+import { MdContactPage } from "react-icons/md";
+import { IoMail } from "react-icons/io5";
+import { PiKanbanDuotone } from "react-icons/pi";
+import { GrGallery } from "react-icons/gr";
+import { FaTable } from "react-icons/fa";
 import { FiEdit } from "react-icons/fi";
 import { TbChristmasTree } from "react-icons/tb";
 import { IoPieChartSharp } from "react-icons/io5";
 import DropDown from "./DropDown";
 import { AiFillDashboard } from "react-icons/ai";
 import { FaRegCopy } from "react-icons/fa";
-import SideBarItems from "./SideBarItems";
+import { FaRegPlusSquare } from "react-icons/fa";
+import { BsThreeDots } from "react-icons/bs";
+import { IoDocumentOutline } from "react-icons/io5";
+import { WiMoonFull } from "react-icons/wi";
+
 import {
 	LayoutOptions,
 	charts,
 	dashboardV,
 	forms,
+	loginRegisterV1,
+	loginRegisterV2,
+	pages,
+	search,
+	tables,
 	uiElements,
 } from "../Assets/sideBarDatat";
+import SideBarItems from "./SideBarItems";
+import ShowMoreDropDown from "./ShowMoreDropDown";
+import { FaRegCircle } from "react-icons/fa6";
 export default function SideBar({ isOpen, setIsOpen }) {
 	return (
 		<div
@@ -119,20 +136,112 @@ export default function SideBar({ isOpen, setIsOpen }) {
 					title={"Forms"}
 					Icon={<FiEdit />}
 				/>
-				<SideBarItems
-					isOpen={isOpen}
-					isDropDown={true}
-					setIsOpen={setIsOpen}
-					data={dashboardV}
-					title={"Dashbord"}
-				/>
-
 				<DropDown
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
-					data={dashboardV}
-					title={"Dashbord"}
+					data={tables}
+					title={"Tables"}
+					Icon={<FaTable />}
 				/>
+				<div className="">
+					<h1 className={isOpen ? "my-0.5 px-1" : "hidden"}>
+						Example
+					</h1>
+					<SideBarItems
+						label={"Calender"}
+						Icon={FaCalendarAlt}
+						isOpen={isOpen}
+					/>
+					<SideBarItems
+						label={"Gallery"}
+						Icon={GrGallery}
+						isOpen={isOpen}
+					/>
+					<SideBarItems
+						label={"Kanband Board"}
+						Icon={PiKanbanDuotone}
+						isOpen={isOpen}
+					/>
+					<DropDown
+						isOpen={isOpen}
+						setIsOpen={setIsOpen}
+						data={dashboardV}
+						title={"Mailbox"}
+						Icon={<IoMail />}
+					/>
+					<DropDown
+						isOpen={isOpen}
+						setIsOpen={setIsOpen}
+						data={pages}
+						title={"Pages"}
+						Icon={<MdContactPage />}
+					/>
+					<ShowMoreDropDown
+						Icon={<FaRegPlusSquare />}
+						isOpen={isOpen}
+						data1={loginRegisterV1}
+						data2={loginRegisterV2}
+						setIsOpen={setIsOpen}
+						lable={"title"}
+						label={"Extras"}
+						title1={"Login & Register V1"}
+						title2={"Login & Register V2"}
+					/>
+					<DropDown
+						data={search}
+						isOpen={isOpen}
+						setIsOpen={setIsOpen}
+						Icon={<FaSearch />}
+						title={"Search"}
+					/>
+					<SideBarItems
+						label={"Simple Search"}
+						Icon={FaRegCircle}
+						isOpen={isOpen}
+					/>
+					<SideBarItems
+						label={"Enhance"}
+						Icon={FaRegCircle}
+						isOpen={isOpen}
+					/>
+				</div>
+				<div className="">
+					<h1 className={isOpen ? "my-0.5 px-1" : "hidden"}>
+						MISCELLANEOUS
+					</h1>
+					<SideBarItems
+						label={"Tabbed Ifram Plugin"}
+						Icon={BsThreeDots}
+						isOpen={isOpen}
+					/>
+					<SideBarItems
+						label={"Document"}
+						Icon={IoDocumentOutline}
+						isOpen={isOpen}
+					/>
+				</div>
+				<div className="">
+					<h1 className={isOpen ? "my-0.5 px-1" : "hidden"}>
+						MISCELLANEOUS
+					</h1>
+					<SideBarItems
+						label={"Leve 1"}
+						Icon={WiMoonFull}
+						isOpen={isOpen}
+					/>
+					<DropDown
+						isOpen={isOpen}
+						setIsOpen={setIsOpen}
+						data={pages}
+						title={"Pages"}
+						Icon={<WiMoonFull />}
+					/>
+					<SideBarItems
+						label={"Leve 1"}
+						Icon={WiMoonFull}
+						isOpen={isOpen}
+					/>
+				</div>
 			</div>
 		</div>
 	);

@@ -77,24 +77,29 @@ export const lables = [
 	{ id: 2, lable: "Warning" },
 	{ id: 3, lable: "Informational" },
 ];
-
-export const extras = [
-	{
-		id: 1,
-		loginRegisterV1: [
+//estras subdata
+export const loginRegisterV1 = [
+	
 			{ id: 1, lable: "Login v1" },
 			{ id: 2, lable: "Register v1" },
 			{ id: 3, lable: "Fogot Password v1" },
 			{ id: 4, lable: "Recover Password v1" },
-		],
-	},
-	{
-		id: 2,
-		loginRegisterV2: [
-			{ id: 1, lable: "Login v2" },
-			{ id: 2, lable: "Register v2" },
-			{ id: 3, lable: "Fogot Password v2" },
-			{ id: 4, lable: "Recover Password v2" },
-		],
-	},
 ];
+
+export const loginRegisterV2 = [
+		{ id: 1, lable: "Login v2" },
+		{ id: 2, lable: "Register v2" },
+		{ id: 3, lable: "Fogot Password v2" },
+		{ id: 4, lable: "Recover Password v2" },
+]
+
+export const extralData = [
+	{id:1,lable:"Lockscreen"},
+	{id:2,lable:"Legacy User Menu"},
+	{id:3,lable:"Language Menu"},
+	{id:4,lable:"Error 404"},
+	{id:5,lable:"Error 500"},
+	{id:6,lable:"Pace"},
+	{id:7,lable:"Blank Page"},
+	{id:8,lable:"Starter Page"},
+]

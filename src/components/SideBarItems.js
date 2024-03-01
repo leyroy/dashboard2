@@ -1,41 +1,43 @@
 import React from "react";
-import { FaSearch } from "react-icons/fa";
 import DropDown from "./DropDown";
-import { dashboardV } from "../Assets/sideBarDatat";
+import { FaRegCircle } from "react-icons/fa6";
 
-function SideBarItems({ isOpen, isDropDown, setIsOpen }) {
+function SideBarItems({ isOpen, Icon, label }) {
 	return (
-		<div className="my-1 flex flex-col">
-			<h2
-				className={`${isOpen ? "block px-2 ml-2" : "hidden"}`}
-			>
-				examples
-			</h2>
-			<div
-				className={`flex ${
-					!isOpen && "mx-auto"
-				} items-center ml-2 px-1 justify-start py-0.5 my-0.5 gap-1 text-textcolor hover:bg-textcolor hover:bg-opacity-10 cursor-pointer`}
-			>
-				<FaSearch />
-				<span
-					className={`text-sm hover:bg-textcolor hover:bg-opacity-10 ${
-						isOpen ? "block" : "hidden"
-					}`}
-				>
-					{" "}
-					Example@
-				</span>
-			</div>
-			{isDropDown && (
-				<DropDown
-					isOpen={isOpen}
-					setIsOpen={setIsOpen}
-					data={dashboardV}
-					title={"Dashbord"}
-				/>
-			)}
+		<div
+			className={`flex  ${
+				!isOpen && "mx-auto w-fit"
+			} rounded hover:bg-textcolor hover:bg-opacity-20 py-1 cursor-pointer text-sm gap-1 px-3 items-center justify-start`}
+		>
+			<Icon className={" h-4 w-4 mr-0.5"} />
+			<span className={`${isOpen ? "flex" : "hidden"}`}>
+				{label}
+			</span>
 		</div>
 	);
 }
+
+export const SidebarNave = ({
+	data,
+	isDropOpen,
+	isOpen,
+}) => {
+	return (
+		<ul>
+			{data.map((item, id) => (
+				<div
+					key={id}
+					className={`px-2
+					} hover:bg-textcolor hover:bg-opacity-10 my-1 cursor-pointer hover:text-white rounded duration-300 flex items-center py-0.5 px-1 justify-start text-sm ease-linear transition-opacity gap-1`}
+				>
+					<FaRegCircle className="w-3 h-3" />
+					<li className="text-sm whitespace-nowrap">
+						{item.lable}
+					</li>
+				</div>
+			))}
+		</ul>
+	);
+};
 
 export default SideBarItems;
