@@ -27,6 +27,10 @@ body {
 .smallTex {
    font-size: 9px;
 }
+.xsmaller {
+   font-size: 7px;
+   line-height: 10px;
+}
 
 
 

@@ -13,8 +13,8 @@ import Visitors from "./Visitors";
 export default function Dashboardv1() {
 	return (
 		<div className="px-2">
-			<div className="flex items-center justify-between p">
-				<h1 className="my-4 text-xl font-medium">Dashboard</h1>
+			<div className="flex items-center justify-between p-2">
+				<h1 className="text-xl font-medium">Dashboard</h1>
 				<div className="text-sm text-bluecolor">
 					home
 					<span className="text-darkgray "> / dashbord</span>
@@ -99,12 +99,6 @@ export default function Dashboardv1() {
 
 				<div className="flex flex-col w-full gap-4  md:w-2/5">
 					<Visitors />
-					<LineChart />
-					<DirectChartContainer />
-
-					<TodoContainer />
-					<Carts />
-					<DirectChartContainer />
 				</div>
 			</section>
 		</div>

@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { useLocation } from "react-router-dom";
+import { HiSquares2X2 } from "react-icons/hi2";
+import { BsArrowsFullscreen } from "react-icons/bs";
+import { IoNotificationsOutline } from "react-icons/io5";
+import { IoChatbubblesOutline } from "react-icons/io5";
+import { IoMdSearch } from "react-icons/io";
 import Dashboardv1 from "./Dashboardv1";
 export default function DashHome({ setIsOpen }) {
 	const [tab, setTab] = useState("");
@@ -24,7 +29,23 @@ export default function DashHome({ setIsOpen }) {
 					<button>Home</button>
 					<button>Contact</button>
 				</div>
-				<div className="ml-auto text-sm">Icons</div>
+				<div className="ml-auto flex items-center justify-center gap-4 text-sm">
+					<IoMdSearch className="h-6 w-6" />
+					<div className="relative text-lg">
+						<IoChatbubblesOutline />
+						<span className="xsmaller -top-1 -right-1 bg-redcolor flex items-center justify-center h-4 w-4 rounded-full absolute p-0.5">
+							1
+						</span>
+					</div>
+					<div className="relative text-lg">
+						<IoNotificationsOutline />
+						<span className="xsmaller -top-1 -right-1 h-4 w-4 flex items-center justify-center bg-yelow rounded-full absolute p-0.5">
+							20
+						</span>
+					</div>
+					<BsArrowsFullscreen />
+					<HiSquares2X2 className="h-6 w-6" />
+				</div>
 			</header>
 			<div>{tab === "dashboardv1" && <Dashboardv1 />}</div>
 			<footer className="flex mt-auto justify-between items-center px-3 text-sm py-4 shadow shadow-darkgray">

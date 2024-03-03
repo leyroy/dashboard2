@@ -16,6 +16,7 @@ import { FaRegPlusSquare } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 import { IoDocumentOutline } from "react-icons/io5";
 import { WiMoonFull } from "react-icons/wi";
+import Admin from "../Assets/images/Capture.PNG";
 
 import {
 	LayoutOptions,
@@ -48,10 +49,7 @@ export default function SideBar({
 			} duration-300 overflow-hidden pl-1 scrollbar-thin bg-darkgray text-textcolor`}
 		>
 			<div className="w-full flex border-opacity-20 items-center justify-start text-lg font-normal border-b border-textcolor py-2 pl-2 gap-1">
-				<MdSchool
-					className="cursor-pointer h-6 w-6"
-					onClick={() => setIsOpen(!isOpen)}
-				/>{" "}
+				<MdSchool className="cursor-pointer h-6 w-6" />
 				<span
 					className={`${isOpen ? "block" : "hidden"} text-sm`}
 				>
@@ -65,10 +63,14 @@ export default function SideBar({
 				}
 			>
 				<div className="w-full flex border-opacity-20 py-3 items-center justify-start text-lg font-normal border-b border-textcolor p-2 gap-1">
-					<MdSchool
-						className="cursor-pointer h-6 w-6"
-						onClick={() => setIsOpen(!isOpen)}
-					/>{" "}
+					<div className="cursor-pointer h-7 w-7 relative">
+						<img
+							src={Admin}
+							alt="Admin"
+							fill
+							className="rounded-full h-7 w-7 object-cover"
+						/>
+					</div>
 					<span
 						className={`${isOpen ? "block" : "hidden"} text-sm`}
 					>

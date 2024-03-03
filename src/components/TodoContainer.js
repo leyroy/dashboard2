@@ -6,25 +6,26 @@ import { todoList } from "../Assets/chartData";
 export const TodoContainer = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<div className="flex w-full flex-col shadow shadow-darkgray">
+		<div className="flex w-full flex-col rounded-sm shadow shadow-textcolor">
 			<div className="w-full px-2 h-9 py-3 mb-auto flex items-center justify-between border-b border-b-textcolor opacity-85">
 				<RiFileList3Fill />
 				<p className="text-sm rounded-sm mr-auto ml-1">
 					Todo List
 				</p>
-				<div className="flex gap-2 justify-center items-center ">
-					<span className="smallTex flex items-center justify-center rounded-sm font-normal  text-white px-0.5 bg-bluecolor">
+				<div className="flex smaller border border-textcolor text-bluecolor justify-center items-center ">
+					<span className="border-r border-t-textcolor py-0.5 px-1">
+						{"<"}
+					</span>
+					<span className="border-r border-t-textcolor py-0.5 px-1">
+						1
+					</span>
+					<span className="border-r border-t-textcolor py-0.5 px-1">
+						2
+					</span>
+					<span className="border-r border-t-textcolor py-0.5 px-1">
 						3
 					</span>
-					<p
-						onClick={() => setIsOpen(!isOpen)}
-						className="text-2xl cursor-pointer font-medium "
-					>
-						{isOpen ? "-" : "+"}
-					</p>
-					<p className="text-xl cursor-pointer font-semibold ">
-						x
-					</p>
+					<span className=" py-0.5 px-1">{">"}</span>
 				</div>
 			</div>
 			<div

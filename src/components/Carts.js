@@ -8,39 +8,35 @@ export default function Carts() {
 	const [isOpen, setIsOpen] = useState(true);
 	const [data, setData] = useState({
 		labels: users.map((data) => data.month),
-		labels: users1.map((data) => data.month),
 		datasets: [
 			{
 				data: users.map((data) => data.rate),
-				data: users1.map((data) => data.rate),
-				fill: true,
-				tension: 0.1,
 			},
 		],
 	});
 	return (
-		<div className="flex flex-col shadow shadow-darkgray">
-			<div className="w-full mb-auto flex items-center justify-between px-2 py-1 border-b border-b-darkgray">
+		<div className="flex flex-col shadow shadow-textcolor rounded-sm">
+			<div className="w-full mb-auto flex items-center justify-between px-2 py-1 border-b border-b-textcolor">
 				<div className=" flex items-center justify-center gap-1">
 					<IoPieChartSharp />
 					<p className="text-sm py-0.5 rounded-sm">user</p>
 				</div>
-				<div className="flex text-sm cursor-pointer items-center justify-center gap-1">
+				<div className="flex text-xs cursor-pointer items-center justify-center gap-1">
 					<span
 						onClick={() => setIsOpen((prev) => !prev)}
-						className={`rounded px-2 py-0.5 ${
-							isOpen && "bg-bluecolor"
+						className={`rounded smallTex px-2 py-0.5 ${
+							isOpen && "bg-bluecolor text-white"
 						}`}
 					>
 						Area
 					</span>
 					<span
 						onClick={() => setIsOpen((prev) => !prev)}
-						className={`rounded px-2 py-0.5 ${
-							!isOpen && "bg-bluecolor"
+						className={`rounded smallTex px-2 py-0.5 ${
+							!isOpen && "bg-bluecolor text-white"
 						}`}
 					>
-						Area
+						Doughnut
 					</span>
 				</div>
 			</div>
@@ -51,7 +47,7 @@ export default function Carts() {
 							className=" flex-1 "
 							data={data}
 							options={{
-								lineTension: 0.3,
+								lineTension: 0.2,
 							}}
 						/>
 					</div>
