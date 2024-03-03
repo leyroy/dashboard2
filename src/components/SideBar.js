@@ -22,6 +22,7 @@ import {
 	charts,
 	dashboardV,
 	forms,
+	levels,
 	loginRegisterV1,
 	loginRegisterV2,
 	pages,
@@ -32,16 +33,21 @@ import {
 import SideBarItems from "./SideBarItems";
 import ShowMoreDropDown from "./ShowMoreDropDown";
 import { FaRegCircle } from "react-icons/fa6";
-export default function SideBar({ isOpen, setIsOpen }) {
+export default function SideBar({
+	isOpen,
+	setIsOpen,
+	tab,
+	setTab,
+}) {
 	return (
 		<div
-			className={`h-screen ${
+			className={`h-screen side__bar sticky bottom-0 ${
 				isOpen
 					? "w-60"
 					: "w-16 flex items-center justify-start flex-col"
 			} duration-300 overflow-hidden pl-1 scrollbar-thin bg-darkgray text-textcolor`}
 		>
-			<div className="w-full flex border-opacity-20 items-center justify-start text-lg font-normal border-b border-textcolor pl-2 gap-1">
+			<div className="w-full flex border-opacity-20 items-center justify-start text-lg font-normal border-b border-textcolor py-2 pl-2 gap-1">
 				<MdSchool
 					className="cursor-pointer h-6 w-6"
 					onClick={() => setIsOpen(!isOpen)}
@@ -84,6 +90,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 				</div>
 
 				<DropDown
+					tab={tab}
+					setTab={setTab}
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
 					data={dashboardV}
@@ -109,6 +117,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 					</div>
 				</div>
 				<DropDown
+					tab={tab}
+					setTab={setTab}
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
 					data={LayoutOptions}
@@ -116,6 +126,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 					Icon={<FaRegCopy />}
 				/>
 				<DropDown
+					tab={tab}
+					setTab={setTab}
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
 					data={charts}
@@ -123,6 +135,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 					Icon={<IoPieChartSharp />}
 				/>
 				<DropDown
+					tab={tab}
+					setTab={setTab}
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
 					data={uiElements}
@@ -130,6 +144,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 					Icon={<TbChristmasTree />}
 				/>
 				<DropDown
+					tab={tab}
+					setTab={setTab}
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
 					data={forms}
@@ -137,6 +153,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 					Icon={<FiEdit />}
 				/>
 				<DropDown
+					tab={tab}
+					setTab={setTab}
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
 					data={tables}
@@ -163,6 +181,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 						isOpen={isOpen}
 					/>
 					<DropDown
+						tab={tab}
+						setTab={setTab}
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}
 						data={dashboardV}
@@ -170,6 +190,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 						Icon={<IoMail />}
 					/>
 					<DropDown
+						tab={tab}
+						setTab={setTab}
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}
 						data={pages}
@@ -177,6 +199,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 						Icon={<MdContactPage />}
 					/>
 					<ShowMoreDropDown
+						tab={tab}
+						setTab={setTab}
 						Icon={<FaRegPlusSquare />}
 						isOpen={isOpen}
 						data1={loginRegisterV1}
@@ -193,6 +217,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
 						setIsOpen={setIsOpen}
 						Icon={<FaSearch />}
 						title={"Search"}
+						tab={tab}
+						setTab={setTab}
 					/>
 					<SideBarItems
 						label={"Simple Search"}
@@ -206,7 +232,9 @@ export default function SideBar({ isOpen, setIsOpen }) {
 					/>
 				</div>
 				<div className="">
-					<h1 className={isOpen ? "my-0.5 px-1" : "hidden"}>
+					<h1
+						className={isOpen ? "my-0.5 text-sm px-1" : "hidden"}
+					>
 						MISCELLANEOUS
 					</h1>
 					<SideBarItems
@@ -221,7 +249,9 @@ export default function SideBar({ isOpen, setIsOpen }) {
 					/>
 				</div>
 				<div className="">
-					<h1 className={isOpen ? "my-0.5 px-1" : "hidden"}>
+					<h1
+						className={isOpen ? "text-sm my-0.5 px-1" : "hidden"}
+					>
 						MISCELLANEOUS
 					</h1>
 					<SideBarItems
@@ -230,9 +260,11 @@ export default function SideBar({ isOpen, setIsOpen }) {
 						isOpen={isOpen}
 					/>
 					<DropDown
+						tab={tab}
+						setTab={setTab}
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}
-						data={pages}
+						data={levels}
 						title={"Pages"}
 						Icon={<WiMoonFull />}
 					/>

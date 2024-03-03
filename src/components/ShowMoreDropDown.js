@@ -6,6 +6,8 @@ import { extralData } from "../Assets/sideBarDatat";
 import { SidebarNave } from "./SideBarItems";
 
 export default function ShowMoreDropDown({
+	tab,
+	setTab,
 	isOpen,
 	setIsOpen,
 	title1,
@@ -50,6 +52,8 @@ export default function ShowMoreDropDown({
 			</div>
 			<div className={`block ${!isDropOpen && "hidden"}`}>
 				<DropDown
+					tab={tab}
+					setTab={setTab}
 					Icon={<FaRegCircle />}
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
@@ -57,6 +61,8 @@ export default function ShowMoreDropDown({
 					title={title1}
 				/>
 				<DropDown
+					tab={tab}
+					setTab={setTab}
 					Icon={<FaRegCircle />}
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
@@ -64,6 +70,8 @@ export default function ShowMoreDropDown({
 					title={title2}
 				/>
 				<SidebarNave
+					tab={tab}
+					setTab={setTab}
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
 					data={extralData}

@@ -1,5 +1,4 @@
 import React from "react";
-import DropDown from "./DropDown";
 import { FaRegCircle } from "react-icons/fa6";
 
 function SideBarItems({ isOpen, Icon, label }) {
@@ -10,18 +9,16 @@ function SideBarItems({ isOpen, Icon, label }) {
 			} rounded hover:bg-textcolor hover:bg-opacity-20 py-1 cursor-pointer text-sm gap-1 px-3 items-center justify-start`}
 		>
 			<Icon className={" h-4 w-4 mr-0.5"} />
-			<span className={`${isOpen ? "flex" : "hidden"}`}>
+			<span
+				className={`${isOpen ? "flex text-sm " : "hidden"}`}
+			>
 				{label}
 			</span>
 		</div>
 	);
 }
 
-export const SidebarNave = ({
-	data,
-	isDropOpen,
-	isOpen,
-}) => {
+export const SidebarNave = ({ data }) => {
 	return (
 		<ul>
 			{data.map((item, id) => (

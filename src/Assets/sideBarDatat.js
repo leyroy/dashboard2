@@ -1,39 +1,55 @@
 export const dashboardV = [
-	{ id: 1, lable: "dashboard v1" },
-	{ id: 2, lable: "dashboard v2" },
-	{ id: 3, lable: "dashboard v3" },
+	{ id: 1, lable: "dashboard v1", link: "dashboardv1" },
+	{ id: 2, lable: "dashboard v2", link: "dashboardv2" },
+	{ id: 3, lable: "dashboard v3", llink: "dashboardv2" },
 ];
 
 export const LayoutOptions = [
-	{ id: 1, lable: "Top Navigation +Sidebar" },
-	{ id: 2, lable: "Top Navigation" },
-	{ id: 3, lable: "Boxed" },
-	{ id: 4, lable: "Fixed Sidebar" },
-	{ id: 5, lable: "Fixed Sidebar +Custom" },
+	{
+		id: 1,
+		lable: "Top Navigation +Sidebar",
+		link: "topNavigationSidebar",
+	},
+	{ id: 2, lable: "Top Navigation", link: "tonavigation" },
+	{ id: 3, lable: "Boxed", link: "boxed" },
+	{ id: 4, lable: "Fixed Sidebar", link: "fiexdsidert" },
+	{
+		id: 5,
+		lable: "Fixed Sidebar +Custom",
+		link: "fixedsidercustom",
+	},
 ];
 
 export const tables = [
-	{ id: 1, lable: "Simple Tables" },
-	{ id: 2, lable: "DataTables" },
-	{ id: 3, lable: "jsGrid" },
+	{ id: 1, lable: "Simple Tables", link: "simpletable" },
+	{ id: 2, lable: "DataTables", link: "datatables" },
+	{ id: 3, lable: "jsGrid", link: "jsgrid" },
 ];
 
 export const forms = [
-	{ id: 1, lable: "General Elements" },
-	{ id: 1, lable: "Advanced Elements" },
-	{ id: 1, lable: "Editors" },
-	{ id: 1, lable: "Validation" },
+	{
+		id: 1,
+		lable: "General Elements",
+		link: "generalelements",
+	},
+	{
+		id: 1,
+		lable: "Advanced Elements",
+		link: "advancedelements",
+	},
+	{ id: 1, lable: "Editors", link: "editor" },
+	{ id: 1, lable: "Validation", link: "validation" },
 ];
 
 export const uiElements = [
-	{ id: 1, lable: "General" },
-	{ id: 2, lable: "Icons" },
-	{ id: 3, lable: "General" },
-	{ id: 4, lable: "Buttons" },
-	{ id: 5, lable: "Liders" },
-	{ id: 6, lable: "Modals & Alerts" },
-	{ id: 7, lable: "Timeline" },
-	{ id: 8, lable: "Ribbons" },
+	{ id: 1, lable: "General", link: "general" },
+	{ id: 2, lable: "Icons", link: "icons" },
+	{ id: 3, lable: "Buttons", link: "buttons" },
+	{ id: 4, lable: "Navbar & tabs", link: "navbartabs" },
+	{ id: 5, lable: "Sliders", link: "sliders" },
+	{ id: 6, lable: "Modals & Alerts", link: "modalalerts" },
+	{ id: 7, lable: "Timeline", link: "timeline" },
+	{ id: 8, lable: "Ribbons", link: "Ribbons" },
 ];
 
 export const charts = [
@@ -79,27 +95,30 @@ export const lables = [
 ];
 //estras subdata
 export const loginRegisterV1 = [
-	
-			{ id: 1, lable: "Login v1" },
-			{ id: 2, lable: "Register v1" },
-			{ id: 3, lable: "Fogot Password v1" },
-			{ id: 4, lable: "Recover Password v1" },
+	{ id: 1, lable: "Login v1" },
+	{ id: 2, lable: "Register v1" },
+	{ id: 3, lable: "Fogot Password v1" },
+	{ id: 4, lable: "Recover Password v1" },
 ];
 
 export const loginRegisterV2 = [
-		{ id: 1, lable: "Login v2" },
-		{ id: 2, lable: "Register v2" },
-		{ id: 3, lable: "Fogot Password v2" },
-		{ id: 4, lable: "Recover Password v2" },
-]
+	{ id: 1, lable: "Login v2" },
+	{ id: 2, lable: "Register v2" },
+	{ id: 3, lable: "Fogot Password v2" },
+	{ id: 4, lable: "Recover Password v2" },
+];
 
 export const extralData = [
-	{id:1,lable:"Lockscreen"},
-	{id:2,lable:"Legacy User Menu"},
-	{id:3,lable:"Language Menu"},
-	{id:4,lable:"Error 404"},
-	{id:5,lable:"Error 500"},
-	{id:6,lable:"Pace"},
-	{id:7,lable:"Blank Page"},
-	{id:8,lable:"Starter Page"},
-]
+	{ id: 1, lable: "Lockscreen" },
+	{ id: 2, lable: "Legacy User Menu" },
+	{ id: 3, lable: "Language Menu" },
+	{ id: 4, lable: "Error 404" },
+	{ id: 5, lable: "Error 500" },
+	{ id: 6, lable: "Pace" },
+	{ id: 7, lable: "Blank Page" },
+	{ id: 8, lable: "Starter Page" },
+];
+export const levels = [
+	{ id: 1, lable: "level 2" },
+	{ id: 2, lable: "level 2" },
+];

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaRegCircle } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function DropDown({
 	isOpen,
@@ -8,11 +9,13 @@ export default function DropDown({
 	data,
 	title,
 	Icon,
+	tab,
+	setTab,
 	isColor,
 }) {
 	const [isDropOpen, setIsDropIsOpen] = useState(false);
 	return (
-		<div className={`${!isOpen && "px-2"}`}>
+		<div className={`${!isOpen && "px-2 "}`}>
 			<div
 				onClick={() => {
 					setIsOpen(true);
@@ -26,7 +29,7 @@ export default function DropDown({
 						: "hover:bg-textcolor hover:bg-opacity-20 text-textcolor hover:text-white"
 				} cursor-pointer`}
 			>
-				<div className="w-5 h-5">{Icon}</div>
+				<div className={`w-5 h-5 ml-1`}>{Icon}</div>
 				<h1
 					className={`${
 						isOpen ? "block whitespace-nowrap text-sm" : "hidden"
@@ -42,19 +45,22 @@ export default function DropDown({
 					<IoIosArrowBack />
 				</div>
 			</div>
-			<ul>
+			<ul className="">
 				{data.map((item, id) => (
-					<div
+					<Link
+						to={`/?tab=${item.link}`}
 						key={id}
 						className={`px-2 ${
 							isDropOpen && isOpen ? "block" : "hidden"
-						} hover:bg-textcolor hover:bg-opacity-10 my-1 cursor-pointer hover:text-white rounded duration-300 flex items-center py-0.5 px-1 justify-start text-sm ease-linear transition-opacity gap-1`}
+						} hover:bg-textcolor hover:bg-opacity-10 my-1 cursor-pointer hover:text-white ${
+							tab === item?.link && "bg-textcolor bg-opacity-25"
+						} rounded duration-300 flex items-center py-0.5 justify-start text-sm ease-linear transition-opacity gap-1`}
 					>
 						<FaRegCircle className="w-3 h-3" />
 						<li className="text-sm whitespace-nowrap">
 							{item.lable}
 						</li>
-					</div>
+					</Link>
 				))}
 			</ul>
 		</div>
