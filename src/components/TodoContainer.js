@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoPieChartSharp } from "react-icons/io5";
+import { RiFileList3Fill } from "react-icons/ri";
 import TodoList from "./TodoList";
 import { todoList } from "../Assets/chartData";
 
@@ -7,12 +7,13 @@ export const TodoContainer = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div className="flex w-full flex-col shadow shadow-darkgray">
-			<div className="w-full h-9 py-3 mb-auto flex items-center justify-between border-b border-b-darkgray">
-				<IoPieChartSharp />
-				<p className="text-sm rounded-sm">Todo List</p>
-				<div className="flex px-4 gap-2 justify-center items-center ">
+			<div className="w-full px-2 h-9 py-3 mb-auto flex items-center justify-between border-b border-b-textcolor opacity-85">
+				<RiFileList3Fill />
+				<p className="text-sm rounded-sm mr-auto ml-1">
+					Todo List
+				</p>
+				<div className="flex gap-2 justify-center items-center ">
 					<span className="smallTex flex items-center justify-center rounded-sm font-normal  text-white px-0.5 bg-bluecolor">
-						{" "}
 						3
 					</span>
 					<p
@@ -24,7 +25,6 @@ export const TodoContainer = () => {
 					<p className="text-xl cursor-pointer font-semibold ">
 						x
 					</p>
-					<IoPieChartSharp className="h-4 w-4" />
 				</div>
 			</div>
 			<div

@@ -1,28 +1,28 @@
 import { useState } from "react";
 import { IoPieChartSharp } from "react-icons/io5";
+import { TiMessages } from "react-icons/ti";
 import Message from "./Message";
 
 export default function DirectChartContainer() {
 	const [isOpen, setIsOpen] = useState(true);
 	return (
 		<div className="flex w-full flex-col shadow shadow-darkgray">
-			<div className="w-full h-9 py-3 mb-auto flex items-center justify-between border-b border-b-darkgray">
+			<div className="w-full px-2 h-9 py-3 mb-auto flex items-center justify-between border-b border-b-darkgray">
 				<p className="text-sm rounded-sm">Direct Chat</p>
-				<div className="flex px-4 gap-2 justify-center items-center ">
+				<div className="flex gap-2 justify-center items-center ">
 					<span className="smallTex flex items-center justify-center rounded-sm font-normal  text-white px-0.5 bg-bluecolor">
 						{" "}
 						3
 					</span>
 					<p
 						onClick={() => setIsOpen(!isOpen)}
-						className="text-2xl cursor-pointer font-medium "
+						className="text-xl cursor-pointer font-semibold "
 					>
 						{isOpen ? "-" : "+"}
 					</p>
-					<p className="text-xl cursor-pointer font-semibold ">
-						x
-					</p>
-					<IoPieChartSharp className="h-4 w-4" />
+
+					<TiMessages className="h-4 w-4" />
+					<span className="cursor-pointer font-medium">x</span>
 				</div>
 			</div>
 			<div

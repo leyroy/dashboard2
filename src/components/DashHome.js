@@ -12,7 +12,7 @@ export default function DashHome({ setIsOpen }) {
 		console.log(url);
 	}, [location.search]);
 	return (
-		<div className="w-full h-screen flex flex-col justify-start overflow-y-scroll">
+		<div className="w-full h-screen gap-3 flex flex-col justify-start overflow-y-scroll">
 			<header className="flex  p-3 gap-4 shadow-md w-full shadow-textcolor">
 				<div
 					className="cursor-pointer"

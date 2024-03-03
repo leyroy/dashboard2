@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoPieChartSharp } from "react-icons/io5";
+import { RxDragHandleDots2 } from "react-icons/rx";
 import { FiEdit } from "react-icons/fi";
 
 export default function TodoList({
@@ -14,7 +14,7 @@ export default function TodoList({
 			key={id}
 			className="flex my-1 px-4 group items-center justify-start gap-3"
 		>
-			<IoPieChartSharp className="h-4 w-4" />
+			<RxDragHandleDots2 className="h-4 w-4" />
 			<input
 				type="checkbox"
 				onChange={() => setIsComplete(!isComplete)}

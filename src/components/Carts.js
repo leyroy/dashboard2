@@ -70,3 +70,50 @@ export default function Carts() {
 		</div>
 	);
 }
+
+export const LineChart = () => {
+	const [isOpen, setIsOpen] = useState();
+	const [data, setData] = useState({
+		labels: users.map((data) => data.month),
+		labels: users1.map((data) => data.month),
+		datasets: [
+			{
+				data: users.map((data) => data.rate),
+				data: users1.map((data) => data.rate),
+				fill: true,
+				tension: 0.1,
+			},
+		],
+	});
+	return (
+		<div className="flex flex-col shadow shadow-darkgray">
+			<div className="w-full mb-auto flex items-center justify-between px-2 py-1 border-b border-b-darkgray">
+				<div className=" flex items-center justify-center gap-1">
+					<IoPieChartSharp />
+					<p className="text-sm py-0.5 rounded-sm">
+						Sales Graph
+					</p>
+				</div>
+				<div>
+					<span
+						onClick={() => setIsOpen(!isOpen)}
+						className="text-2xl font-medium cursor-pointer "
+					>
+						{isOpen ? "-" : "+"}
+					</span>
+					<span></span>
+				</div>
+			</div>
+			<div
+				className={` duration-300 transition-shadow overflow-y-scroll flex-col flex items-center justify-center ${
+					isOpen ? "h-52 p-2 duration-500" : "h-0  duration-500"
+				}`}
+			>
+				<Line
+					data={data}
+					type="line"
+				/>
+			</div>
+		</div>
+	);
+};
