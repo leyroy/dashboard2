@@ -29,11 +29,8 @@ export const TodoContainer = () => {
 				</div>
 			</div>
 			<div
-				className={` duration-300 overflow-hidden transition-shadow flex-col flex items-center justify-center ${
-					isOpen
-						? "h-auto p-2 duration-500"
-						: "h-0  duration-500"
-				}`}
+				className={` duration-300 overflow-hidden transition-shadow flex-col flex items-center justify-center "h-auto p-2 duration-500"
+						`}
 			>
 				<div className="flex h-full justify-between flex-col mb-1 w-full">
 					<div className=" mt-5">
@@ -47,12 +44,6 @@ export const TodoContainer = () => {
 								/>
 							)
 						)}
-						<TodoList
-							id={7}
-							todo={"Learn for the mid-semister exam"}
-							duration={"1 month"}
-							durationColor={"textcolor"}
-						/>
 					</div>
 					<button className="ml-auto mr-5 px-2 py-2  rounded bg-bluecolor text-white">
 						+ Add task
