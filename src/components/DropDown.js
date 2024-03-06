@@ -45,14 +45,18 @@ export default function DropDown({
 					<IoIosArrowBack />
 				</div>
 			</div>
-			<ul className="">
+			<ul
+				className={`overflow-hidden duration-300 ${
+					isDropOpen && isOpen
+						? "h-auto duration-300"
+						: "h-0 overflow-hidden"
+				} duration-300`}
+			>
 				{data.map((item, id) => (
 					<Link
 						to={`/?tab=${item.link}`}
 						key={id}
-						className={`px-2 ${
-							isDropOpen && isOpen ? "block" : "hidden"
-						} hover:bg-textcolor hover:bg-opacity-10 my-1 cursor-pointer hover:text-white ${
+						className={`px-2 hover:bg-textcolor hover:bg-opacity-10 duration-300  my-1 cursor-pointer hover:text-white ${
 							tab === item?.link && "bg-textcolor bg-opacity-25"
 						} rounded duration-300 flex items-center py-0.5 justify-start text-sm ease-linear transition-opacity gap-1`}
 					>

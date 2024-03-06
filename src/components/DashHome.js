@@ -7,8 +7,10 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { IoMdSearch } from "react-icons/io";
 import Dashboardv1 from "./Dashboardv1";
+import Settings from "./Settings";
 export default function DashHome({ setIsOpen }) {
 	const [tab, setTab] = useState("");
+	const [isShowSettings, setIsShowSettings] = useState(true);
 	const location = useLocation();
 	useEffect(() => {
 		const params = new URLSearchParams(location.search);
@@ -17,8 +19,8 @@ export default function DashHome({ setIsOpen }) {
 		console.log(url);
 	}, [location.search]);
 	return (
-		<div className="w-full h-screen gap-3 flex flex-col justify-start overflow-y-scroll">
-			<header className="flex  p-3 gap-4 shadow-md w-full shadow-textcolor">
+		<div className="w-full h-screen flex flex-col justify-start overflow-y-scroll">
+			<header className="flex z-20 p-3 bg-white gap-4 shadow-md w-full shadow-textcolor">
 				<div
 					className="cursor-pointer"
 					onClick={() => setIsOpen((pre) => !pre)}
@@ -44,10 +46,22 @@ export default function DashHome({ setIsOpen }) {
 						</span>
 					</div>
 					<BsArrowsFullscreen />
-					<HiSquares2X2 className="h-6 w-6" />
+					<div
+						onClick={() => setIsShowSettings((prv) => !prv)}
+						className="cursor-pointer"
+					>
+						<HiSquares2X2 className="h-6 w-6" />
+					</div>
 				</div>
 			</header>
-			<div>{tab === "dashboardv1" && <Dashboardv1 />}</div>
+			<div className="relative">
+				{tab === "dashboardv1" && <Dashboardv1 />}
+				<Settings
+					isShowSettings={isShowSettings}
+					setIsShowSettings={setIsShowSettings}
+				/>
+			</div>
+
 			<footer className="flex mt-auto justify-between items-center px-3 text-sm py-4 shadow shadow-darkgray">
 				<div>
 					Copyrigth &copy; 2020-2021{" "}

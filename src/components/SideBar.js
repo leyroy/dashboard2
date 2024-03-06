@@ -42,11 +42,9 @@ export default function SideBar({
 }) {
 	return (
 		<div
-			className={`h-screen side__bar sticky bottom-0 ${
-				isOpen
-					? "w-60"
-					: "w-16 flex items-center justify-start flex-col"
-			} duration-300 overflow-hidden pl-1 scrollbar-thin bg-darkgray text-textcolor`}
+			className={`h-screen side__bar z-30 md:sticky bottom-0 ${
+				isOpen ? "w-60 fixed md:flex" : "w-16 hidden md:flex"
+			} duration-300 overflow-hidden items-center justify-start flex-col pl-1 scrollbar-thin bg-darkgray text-textcolor`}
 		>
 			<div className="w-full flex border-opacity-20 items-center justify-start text-lg font-normal border-b border-textcolor py-2 pl-2 gap-1">
 				<MdSchool className="cursor-pointer h-6 w-6" />

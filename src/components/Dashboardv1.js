@@ -12,7 +12,7 @@ import Visitors from "./Visitors";
 
 export default function Dashboardv1() {
 	return (
-		<div className="px-2">
+		<div className="px-2 mb-3">
 			<div className="flex items-center justify-between p-2">
 				<h1 className="text-xl font-medium">Dashboard</h1>
 				<div className="text-sm text-bluecolor">

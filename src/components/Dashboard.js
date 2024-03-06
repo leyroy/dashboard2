@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SideBar from "./SideBar";
 import DashHome from "./DashHome";
 import { useLocation } from "react-router-dom";
+import { Modal } from "./Modal";
 
 function Dashboard() {
 	const [isOpen, setIsOpen] = useState(true);
@@ -14,7 +15,9 @@ function Dashboard() {
 	}, [location.search]);
 
 	return (
-		<div className="flex h-screen overflow-hidden">
+		<div className="flex relative h-screen overflow-hidden">
+			{isOpen && <Modal setIsOpen={setIsOpen} />}
+
 			<SideBar
 				tab={tab}
 				setTab={setTab}
