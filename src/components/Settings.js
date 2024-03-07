@@ -9,13 +9,30 @@ import {
 } from "../Assets/dashHomeSidebarIcons";
 import { IoCloseOutline } from "react-icons/io5";
 
-const ShowSetingsNavs = ({ data, label }) => {
+const ShowSetingsNavs = ({ data, label, flag }) => {
+	const [bg, setbg] = useState("white");
 	return (
-		<div className=" gap-2 flex flex-col text-sm text-white">
+		<div className="flex flex-col gap-2 text-sm text-white ">
 			<h1>{label}</h1>
-			{data.map((item) => (
-				<ShowOptions item={item} />
-			))}
+			{flag ? (
+				<select
+					className="p-1 text-white border rounded bg-darkgray border-textcolor focus:outline-0"
+					name=""
+					id=""
+				>
+					{data.map((item) => (
+						<option
+							className={`border-0 p-0.5 bg-${`${item.color}`}`}
+							key={item.id}
+							value={data.lable}
+						>
+							{item.lable}
+						</option>
+					))}
+				</select>
+			) : (
+				data.map((item) => <ShowOptions item={item} />)
+			)}
 		</div>
 	);
 };
@@ -25,11 +42,11 @@ const ShowOptions = ({ item }) => {
 	return (
 		<div
 			key={item.id}
-			className="flex text-textcolor text-sm cursor-pointer items-start justify-start gap-2"
+			className="flex items-start justify-start gap-2 text-sm cursor-pointer text-textcolor"
 		>
 			<input
 				onChange={() => setEnable((prv) => !prv)}
-				className="cursor-pointer h-4 w-4"
+				className="w-4 h-4 cursor-pointer"
 				type="checkbox"
 				checked={enable}
 				id=""
@@ -43,12 +60,14 @@ function Settings({ isShowSettings, setIsShowSettings }) {
 	return (
 		<div
 			className={`-10 ${
-				isShowSettings ? "w-48 pl-2 pt-12" : "w-0"
-			} duration-500 top-0 fixed flex flex-col bottom-0 pb-7 h-screen overflow-hidden bg-darkgray right-6`}
+				isShowSettings
+					? "w-48 sticky overflow-hidden pl-7 top-0 h-screen"
+					: "w-0"
+			} duration-500 flex flex-col bottom-0 overflow-y-hidden bg-darkgray ml-auto`}
 		>
 			<div
 				onClick={() => setIsShowSettings((prv) => !prv)}
-				className="cursor-pointer text-2xl mt-3 text-white ml-auto mr-3"
+				className="mt-3 ml-auto mr-3 text-2xl text-white cursor-pointer"
 			>
 				<IoCloseOutline />
 			</div>
@@ -57,7 +76,7 @@ function Settings({ isShowSettings, setIsShowSettings }) {
 					isShowSettings
 						? "overflow-y-scroll scrollbar-thin scrollbar-corner-darkgray"
 						: "overflow-y-hidden"
-				} mt-3 scrollbar-track-white  gap-4 pb-4 flex flex-col h-full`}
+				} mt-3 pr-1 scrollbar-track-darkgray gap-4 pb-4 flex flex-col h-full`}
 			>
 				{isShowSettings && (
 					<>
@@ -84,6 +103,7 @@ function Settings({ isShowSettings, setIsShowSettings }) {
 						<ShowSetingsNavs
 							data={navbarVariants}
 							label={"Navebar Variants"}
+							flag={true}
 						/>
 					</>
 				)}

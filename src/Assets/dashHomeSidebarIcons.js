@@ -98,78 +98,97 @@ export const navbarVariants = [
 	{
 		id: 1,
 		lable: "Primary",
+		color: "primary",
 	},
 	{
 		id: 2,
 		lable: "Secondary",
+		color: "secondary",
 	},
 	{
 		id: 3,
 		lable: "Info",
+		color: "info",
 	},
 	{
 		id: 4,
 		lable: "Success",
+		color: "success",
 	},
 	{
 		id: 5,
 		lable: "Danger",
+		color: "danger",
 	},
 	{
 		id: 6,
 		lable: "Indigo",
+		color: "indigo",
 	},
 	{
 		id: 7,
 		lable: "Purple",
+		color: "purple",
 	},
 	{
 		id: 8,
 		lable: "Pink",
+		color: "pink",
 	},
 	{
 		id: 9,
 		lable: "Navy",
+		color: "navy",
 	},
 	{
 		id: 10,
 		lable: "Lightblue",
+		color: "lightblue",
 	},
 	{
 		id: 11,
 		lable: "Teal",
+		color: "teal",
 	},
 	{
 		id: 12,
 		lable: "Cyan",
+		colore: "cyan",
 	},
 	{
 		id: 13,
 		lable: "Dark",
+		color: "dark",
 	},
 	{
 		id: 14,
 		lable: "Gray dark",
+		color: "graydark",
 	},
 	{
 		id: 15,
 		lable: "Gray",
+		color: "gray",
 	},
 	{
 		id: 16,
 		lable: "Ligth",
+		color: "ligth",
 	},
 	{
 		id: 17,
 		lable: "Warning",
+		color: "warning",
 	},
 	{
 		id: 18,
 		lable: "White",
+		color: "white",
 	},
 	{
 		id: 19,
 		lable: "Orange",
+		color: "orange",
 	},
 ];
 

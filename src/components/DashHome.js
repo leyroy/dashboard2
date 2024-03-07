@@ -10,7 +10,8 @@ import Dashboardv1 from "./Dashboardv1";
 import Settings from "./Settings";
 export default function DashHome({ setIsOpen }) {
 	const [tab, setTab] = useState("");
-	const [isShowSettings, setIsShowSettings] = useState(true);
+	const [isShowSettings, setIsShowSettings] =
+		useState(false);
 	const location = useLocation();
 	useEffect(() => {
 		const params = new URLSearchParams(location.search);
@@ -19,7 +20,7 @@ export default function DashHome({ setIsOpen }) {
 		console.log(url);
 	}, [location.search]);
 	return (
-		<div className="w-full h-screen flex flex-col justify-start overflow-y-scroll">
+		<div className="w-full h-screen overflow-hidden flex flex-col justify-start overflow-y-scroll">
 			<header className="flex z-20 p-3 bg-white gap-4 shadow-md w-full shadow-textcolor">
 				<div
 					className="cursor-pointer"
