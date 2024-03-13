@@ -3,13 +3,12 @@ import {
 	BrowserRouter as Router,
 	Routes,
 	Route,
-	BrowserRouter,
 } from "react-router-dom";
 
 function App() {
 	return (
 		
-		<Router basename="/dashboard">
+		<Router basename="/dashboard2">
 			<Routes>
 				<Route
 					path="/"
