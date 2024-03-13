@@ -34,7 +34,7 @@ export default function ShowMoreDropDown({
 						: "hover:bg-textcolor hover:bg-opacity-20 text-textcolor hover:text-white"
 				} cursor-pointer`}
 			>
-				<div className="w-5 text-sm h-5">{Icon}</div>
+				<div className="w-6 text-2xl font-semibold h-6">{Icon}</div>
 				<h1
 					className={`${
 						isOpen ? "block whitespace-nowrap text-sm" : "hidden"

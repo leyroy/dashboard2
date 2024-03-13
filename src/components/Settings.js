@@ -31,7 +31,7 @@ const ShowSetingsNavs = ({ data, label, flag }) => {
 					))}
 				</select>
 			) : (
-				data.map((item) => <ShowOptions item={item} />)
+				data.map((item) => <div key={item.id}> <ShowOptions item={item} /></div>)
 			)}
 		</div>
 	);

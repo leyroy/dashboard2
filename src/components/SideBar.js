@@ -43,7 +43,7 @@ export default function SideBar({
 	return (
 		<div
 			className={`h-screen side__bar z-30 md:sticky bottom-0 ${
-				isOpen ? "w-60 fixed md:flex" : "w-16 hidden md:flex"
+				isOpen ? "w-70 fixed md:flex" : "w-16 hidden md:flex"
 			} duration-300 overflow-hidden items-center justify-start flex-col pl-1 scrollbar-thin bg-darkgray text-textcolor`}
 		>
 			<div className="w-full flex border-opacity-20 items-center justify-start text-lg font-normal border-b border-textcolor py-2 pl-2 gap-1">
@@ -57,7 +57,7 @@ export default function SideBar({
 			<div
 				className={
 					isOpen &&
-					"h-full scrollbar-thin scrollbar-track-darkgray scrollbar-thumb-bluecolor overflow-scroll pb-10"
+					"h-full scrollbar-thin flex flex-col gap-3 scrollbar-track-darkgray scrollbar-thumb-bluecolor overflow-scroll pb-10"
 				}
 			>
 				<div className="w-full flex border-opacity-20 py-3 items-center justify-start text-lg font-normal border-b border-textcolor p-2 gap-1">

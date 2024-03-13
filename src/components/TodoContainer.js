@@ -36,12 +36,13 @@ export const TodoContainer = () => {
 					<div className=" mt-5">
 						{todoList.map(
 							({ todo, duration, durationColor, id }) => (
+								<div>
 								<TodoList
 									id={id}
 									todo={todo}
 									duration={duration}
 									durationColor={durationColor}
-								/>
+								/></div>
 							)
 						)}
 					</div>

@@ -8,7 +8,7 @@ import {
 function App() {
 	return (
 		
-		<Router basename="/dashboard2">
+		<Router>
 			<Routes>
 				<Route
 					path="/"

@@ -8,7 +8,9 @@ function SideBarItems({ isOpen, Icon, label }) {
 				!isOpen && "mx-auto w-fit"
 			} rounded hover:bg-textcolor hover:bg-opacity-20 py-1 cursor-pointer text-sm gap-1 px-3 items-center justify-start`}
 		>
-			<Icon className={" h-4 w-4 mr-0.5"} />
+			<div className="font-semibold h-6 w-6 text-2xl">
+				<Icon className={"  mr-0.5"} />
+			</div>
 			<span
 				className={`${isOpen ? "flex text-sm " : "hidden"}`}
 			>
