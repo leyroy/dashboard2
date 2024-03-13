@@ -5,10 +5,9 @@ import {
 	IoPieChartSharp,
 } from "react-icons/io5";
 import { FaUserPlus } from "react-icons/fa6";
-import Carts, { LineChart } from "./Carts";
+import Carts from "./Carts";
 import DirectChartContainer from "./DirectChartContainer";
 import { TodoContainer } from "./TodoContainer";
-import Visitors from "./Visitors";
 
 export default function Dashboardv1() {
 	return (
@@ -98,7 +97,8 @@ export default function Dashboardv1() {
 				</div>
 
 				<div className="flex flex-col w-full gap-4  md:w-2/5">
-					<Visitors />
+				<TodoContainer />
+				<TodoContainer />
 				</div>
 			</section>
 		</div>
