@@ -90,13 +90,13 @@ export default function Dashboardv1() {
 				</div>
 			</section>
 			<section className="flex flex-col gap-4 mt-4 md:flex-row">
-				<div className="flex flex-col w-full gap-4  md:w-3/5">
+				<div className="flex flex-col w-full gap-6 md:w-3/5">
 					<Carts />
 					<DirectChartContainer />
 					<TodoContainer />
 				</div>
-
-				<div className="flex flex-col w-full gap-4  md:w-2/5">
+				<div className="flex flex-col w-full gap-6 md:w-2/5">
+				<DirectChartContainer />
 				<TodoContainer />
 				<TodoContainer />
 				</div>
