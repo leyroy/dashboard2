@@ -1,6 +1,6 @@
 {
-  "homepage": "http://leyroy.github.io/dashboard2",
-  "name": "dashbord2",
+  "homepage": "https://leyroy.github.io/dashboard",
+  "name": "dashboard2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

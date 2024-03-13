@@ -8,8 +8,8 @@ import {
 
 function App() {
 	return (
-		<BrowserRouter basename="/dashboard2">
-		<Router>
+		
+		<Router basename="/dashboard">
 			<Routes>
 				<Route
 					path="/"
@@ -17,8 +17,6 @@ function App() {
 				/>
 			</Routes>
 		</Router>
-		</BrowserRouter>
 	);
 }
-
 export default App;
